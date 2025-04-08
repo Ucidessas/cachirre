@@ -1,0 +1,247 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background-color: #ee6b13;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Menú de categorías fijo */
+nav#menu-categorias {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  background-color: #00b82e;
+  z-index: 1000;
+  animation: slideIn 0.8s ease-out;
+}
+
+/* Animación de slideIn */
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+nav#menu-categorias button {
+  background-color: #fff;
+  border: none;
+  margin: 10px;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav#menu-categorias button:hover,
+nav#menu-categorias button:focus {
+  background-color: #2236e6;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Espacio superior para el contenido */
+main {
+  margin-top: 120px;
+}
+
+/* Contenedor de imágenes de la categoría */
+#menu-imagenes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  background-color: #fcf3cf;
+}
+
+#menu-imagenes img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+#menu-imagenes img:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor de platillos */
+section#menu-platillos {
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Estilos para cada platillo */
+.platillo {
+  background-color: #fff;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.platillo:hover {
+  transform: translateY(-5px);
+}
+
+.platillo h3 {
+  margin-bottom: 8px;
+  color: #d300b0;
+  font-size: 1.4rem;
+}
+
+.platillo p {
+  margin-bottom: 12px;
+}
+
+.platillo span {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Galería de Experiencias */
+#gallery {
+  padding: 20px;
+  text-align: center;
+  background-color: #eef2f3;
+}
+
+#gallery h2 {
+  margin-bottom: 20px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container {
+  width: 600px;
+  max-width: 90%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 10px;
+}
+
+.slider-container img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease;
+}
+
+.prev, .next {
+  background-color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+/* Modal estilos */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  animation: modalFadeIn 0.5s ease-in;
+}
+
+.modal-content img {
+  width: 300px;
+  height: 300PX;
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+/* Diseño responsivo */
+@media (max-width: 600px) {
+  nav#menu-categorias {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav#menu-categorias button {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+  
+  #menu-imagenes img, .slider-container {
+    width: 90%;
+  }
+}

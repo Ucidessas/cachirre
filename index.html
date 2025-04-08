@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAR, Restaurante, y Hospedaje, CACHIRRE</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+<body>
+ 
+
+  <!-- Contenido principal -->
+  <main>
+
+     <!-- Encabezado -->
+  <header>
+    <h1>BAR, Restaurante, y Hospedaje, CACHIRRE</h1>
+  </header>
+
+  <!-- Menú de categorías fijo -->
+  <nav id="menu-categorias">
+    <button data-category="entradas">Entradas</button>
+    <button data-category="platosFuertes">Platos Fuertes</button>
+    <button data-category="postres">Postres</button>
+    <button data-category="bebidas">Bebidas</button>
+  </nav>
+  
+    <!-- Contenedor para las imágenes de la categoría -->
+    <div id="menu-imagenes">
+      <!-- Se llenará dinámicamente -->
+    </div>
+
+    <!-- Contenedor para los productos/platillos -->
+    <section id="menu-platillos">
+      <!-- Se llenará dinámicamente -->
+    </section>
+
+    <!-- Galería de Experiencias -->
+    <section id="gallery">
+      <h2>Galería de Experiencias</h2>
+      <div class="slider">
+        <button class="prev">&lt;</button>
+        <div class="slider-container">
+          <img src="" alt="Experiencia" id="slider-image">
+        </div>
+        <button class="next">&gt;</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal para mostrar detalles del producto de forma ampliada -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content enlarged">
+      <span class="close-button">&times;</span>
+      <div id="modal-body">
+        <!-- Aquí se mostrará la información ampliada del producto -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
